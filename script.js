@@ -1,4 +1,3 @@
-// JavaScript for login form submission
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
@@ -7,30 +6,28 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     // Check credentials
     if (username === "30404261200811" && password === "Vxdt@7429") {
         document.getElementById("loginPage").style.display = "none";
-        document.getElementById("iconsPage").style.display = "grid"; // Show icons page
+        document.getElementById("iconsPage").style.display = "grid";
     } else {
         alert("اسم المستخدم أو كلمة المرور غير صحيحة.");
     }
 });
 
-// Function to show result page
 function showResultPage() {
     document.getElementById("iconsPage").style.display = "none";
-    document.getElementById("resultPage").style.display = "block"; // Show result page
+    document.getElementById("resultPage").style.display = "block";
 }
 
-// JavaScript for navigation between result pages
+function forgotPassword() {
+    alert("يرجى التواصل مع دعم الجامعة لاستعادة كلمة المرور.");
+}
+
+// JavaScript for navigation between pages
 function showFirstTermResult() {
     document.getElementById("resultPage").style.display = "none";
-    document.getElementById("firstTermResultPage").style.display = "block"; // Show first term result
+    document.getElementById("firstTermResultPage").style.display = "block";
 }
 
 function showSecondTermResult() {
     document.getElementById("resultPage").style.display = "none";
-    document.getElementById("secondTermResultPage").style.display = "block"; // Show second term result
-}
-
-// Forgot password function
-function forgotPassword() {
-    alert("يرجى التواصل مع دعم الجامعة لاستعادة كلمة المرور.");
+    document.getElementById("secondTermResultPage").style.display = "block";
 }
