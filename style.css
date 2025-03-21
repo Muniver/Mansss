@@ -4,14 +4,12 @@ body {
     padding: 0;
     background-image: url('mans.png');
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
     color: #ccc;
-    overflow-y: auto;
 }
 
 .logo {
@@ -21,27 +19,41 @@ body {
     margin: 20px auto;
 }
 
-.result-container {
+.login-container, .result-container {
     background-color: rgba(0, 0, 0, 0.7);
     color: #ccc;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     width: 300px;
-    max-width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
 }
 
-h2 {
+.login-container h1 {
+    font-size: 24px;
+    color: #00cccc;
     margin-bottom: 10px;
 }
 
-h3 {
-    font-size: 18px;
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ccc;
 }
 
-table {
+.login-container button {
+    background-color: #00cccc;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.result-container table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -57,21 +69,10 @@ th {
     background-color: #f8f8f8;
 }
 
-.grade-pass {
-    color: #4CAF50;
-}
-
-.grade-good {
-    color: #2196F3;
-}
-
-.grade-excellent {
-    color: #FF9800;
-}
-
-.grade-fail {
-    color: #F44336;
-}
+.grade-pass { color: #4CAF50; }
+.grade-good { color: #2196F3; }
+.grade-excellent { color: #FF9800; }
+.grade-fail { color: #F44336; }
 
 .footer {
     margin-top: 20px;
