@@ -1,30 +1,17 @@
-/* خلفية الصفحة الأولى */
-body.first-page {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('mans.png');
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
     color: #ccc;
-}
-
-/* خلفية الصفحات الأخرى */
-body:not(.first-page) {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    color: #333; /* لون النص في الصفحات الأخرى */
+    overflow: hidden; /* يمنع ظهور شريط التمرير عند التغيير في الحجم */
 }
 
 .logo {
@@ -41,6 +28,7 @@ body:not(.first-page) {
     padding: 20px;
     text-align: center;
     width: 300px;
+    max-width: 90%; /* لضمان عدم تجاوز العرض */
 }
 
 .login-container h1 {
@@ -59,13 +47,17 @@ body:not(.first-page) {
     border-radius: 5px;
     background-color: #333;
     color: #ccc;
+    font-size: 16px;
 }
 
 .login-container button {
     background-color: #00cccc;
     color: white;
-    font-size: 16px;
     cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #009999; /* تغيير اللون عند مرور الماوس */
 }
 
 .remember {
@@ -84,6 +76,10 @@ body:not(.first-page) {
 .footer-links a {
     color: #ccc;
     text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #00cccc;
 }
 
 .icons-container {
@@ -122,10 +118,21 @@ th {
     background-color: #f8f8f8;
 }
 
-.grade-pass { color: #4CAF50; }
-.grade-good { color: #2196F3; }
-.grade-excellent { color: #FF9800; }
-.grade-fail { color: #F44336; }
+.grade-pass {
+    color: #4CAF50;
+}
+
+.grade-good {
+    color: #2196F3;
+}
+
+.grade-excellent {
+    color: #FF9800;
+}
+
+.grade-fail {
+    color: #F44336;
+}
 
 .footer {
     margin-top: 20px;
