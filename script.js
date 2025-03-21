@@ -6,6 +6,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // التحقق من بيانات الاعتماد
     if (username === "30404261200811" && password === "Vxdt@7429") {
+        // إخفاء صفحة الدخول وعرض صفحة النتائج
         document.getElementById("loginPage").style.display = "none";
         document.getElementById("resultPage").style.display = "block";
     } else {
@@ -13,19 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     }
 });
 
-// دالة لعرض صفحة النتيجة الأولى
-function showFirstTermResult() {
-    document.getElementById("resultPage").style.display = "none";
-    document.getElementById("firstTermResultPage").style.display = "block";
-}
-
-// دالة للعودة للصفحة الرئيسية
-function goBackToResultPage() {
-    document.getElementById("firstTermResultPage").style.display = "none";
-    document.getElementById("resultPage").style.display = "block";
-}
-
-// دالة لاستعادة كلمة المرور (مؤقتة الآن)
+// دالة لعرض صفحة استعادة كلمة المرور
 function forgotPassword() {
     alert("يرجى التواصل مع دعم الجامعة لاستعادة كلمة المرور.");
 }
