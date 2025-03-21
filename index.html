@@ -5,6 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة الخدمات الطلابية</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            width: 120px;
+            margin-top: 20px;
+        }
+        .login-container, .icons-container, .result-container {
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+        input, button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        .grade-pass { color: orange; }
+        .grade-good { color: green; }
+        .grade-very-good { color: blue; }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: gray;
+        }
+        .result-options button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body class="first-page">
 
@@ -16,152 +72,69 @@
     <form id="loginForm">
         <input type="text" id="username" placeholder="اسم المستخدم" required>
         <input type="password" id="password" placeholder="كلمة المرور" required>
-        <div class="remember">
+        <div>
             <label>تذكرني</label>
             <input type="checkbox">
         </div>
         <button type="submit">تسجيل الدخول</button>
     </form>
-    <a href="#" class="forgot-password" onclick="forgotPassword()">نسيت كلمة المرور</a>
-    <div class="footer-links">
-        <a href="#">سياسة خصوصية وتأمين البيانات</a>
-        <a href="#">مساعدة</a>
+    <a href="#" class="forgot-password">نسيت كلمة المرور</a>
+    <div class="footer">
+        <a href="#">سياسة خصوصية وتأمين البيانات</a> |
+        <a href="#">مساعدة</a> |
         <a href="#">English</a>
     </div>
-</div>
-
-<!-- Icons Page -->
-<div id="iconsPage" class="icons-container" style="display: none;">
-    <img src="mans5.png" alt="جامعة المنصورة" class="logo">
-    <div class="icon">رغبات التشعيب</div>
-    <div class="icon">مقرراتي</div>
-    <div class="icon">مقررات اختيارية</div>
-    <div class="icon">بريد الجامعة</div>
-    <div class="icon" onclick="showResultPage()">النتائج</div>
-    <div class="icon">الخدمات</div>
 </div>
 
 <!-- Result Page -->
 <div id="resultPage" class="result-container" style="display: none;">
     <img src="mans5.png" alt="MU" class="logo">
-    <h2>كلية التجارة-الصف الثالث- انتظام </h2>
-    <p>العام الدراسي: 2023-2024</p>
-    <h1>نتيجة الطالب</h1>
+    <h2>كلية التجارة - الصف الثالث - انتظام</h2>
+    <p>العام الدراسي: 2024-2025 | الترم: أول</p>
     <h3>الاسم: يوسف محمد العوضي متولي السكري</h3>
 
-    <div class="result-options">
-        <button onclick="showFirstTermResult()">نتيجة الترم الأول</button>
-        <button onclick="showSecondTermResult()">نتيجة الترم الثاني</button>
+    <table>
+        <tr>
+            <th>المقرر</th>
+            <th>أعمال السنة</th>
+            <th>التحريري</th>
+            <th>الدرجة</th>
+            <th>التقدير</th>
+        </tr>
+        <tr><td>أصول التكاليف (1)</td><td>3</td><td>1</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+        <tr><td>أصول التكاليف (2)</td><td>3</td><td>1</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+        <tr><td>المحاسبة الحكومية والقومية (1)</td><td>3</td><td>1</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+        <tr><td>المحاسبة الحكومية والقومية (2)</td><td>3</td><td>1</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+        <tr><td>أصول المراجعة</td><td>4</td><td>1</td><td>5</td><td class="grade-good">جيد</td></tr>
+        <tr><td>إدارة المنشآت المالية</td><td>4</td><td>2</td><td>6</td><td class="grade-good">جيد</td></tr>
+        <tr><td>إدارة المشتريات والمخازن</td><td>4</td><td>1</td><td>5</td><td class="grade-good">جيد</td></tr>
+        <tr><td>التنمية والتخطيط الاقتصادي</td><td>4</td><td>-</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+        <tr><td>اقتصاديات المالية العامة والنظم الضريبية</td><td>4</td><td>-</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+        <tr><td>التأمين ورياضياته</td><td>4</td><td>2</td><td>6</td><td class="grade-good">جيد</td></tr>
+        <tr><td>الإحصاء التطبيقي وبحوث العمليات</td><td>4</td><td>2</td><td>6</td><td class="grade-good">جيد</td></tr>
+        <tr><td>دراسات تجارية بلغة إنجليزية (3)</td><td>-</td><td>4</td><td>4</td><td class="grade-pass">مقبول</td></tr>
+    </table>
+
+    <h3>الإجمالي: <span class="grade-good">22 مادة، 6 مواد بنظام الساعات المعتمدة</span></h3>
+    <h3>التقدير الكلي: <span class="grade-good">جيد</span></h3>
+    <h3>GPA: <span class="grade-good">2.5</span></h3>
+
+    <div class="footer">
+        جميع الحقوق محفوظة © جامعة المنصورة 2025
     </div>
 </div>
 
-<!-- First Term Result Page -->
-<h2>نتيجة الصف الثالث الترم الأول - تجارة انتظام</h2>
-<p>العام الدراسي: 2024-2025 | الترم: أول</p>
-<h3>الاسم: يوسف محمد العوضي متولي السكري</h3>
+<script>
+    const loginForm = document.getElementById("loginForm");
+    const loginPage = document.getElementById("loginPage");
+    const resultPage = document.getElementById("resultPage");
 
-<table>
-    <tr>
-        <th>المقرر</th>
-        <th>أعمال السنة</th>
-        <th>التحريري</th>
-        <th>الدرجة</th>
-        <th>التقدير</th>
-    </tr>
-    <tr>
-        <td>أصول التكاليف (1)</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-    <tr>
-        <td>أصول التكاليف (2)</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-    <tr>
-        <td>المحاسبة الحكومية والقومية (1)</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-    <tr>
-        <td>المحاسبة الحكومية والقومية (2)</td>
-        <td>3</td>
-        <td>1</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-    <tr>
-        <td>أصول المراجعة</td>
-        <td>4</td>
-        <td>1</td>
-        <td>5</td>
-        <td class="grade-good">جيد</td>
-    </tr>
-    <tr>
-        <td>إدارة المنشآت المالية</td>
-        <td>4</td>
-        <td>2</td>
-        <td>6</td>
-        <td class="grade-good">جيد</td>
-    </tr>
-    <tr>
-        <td>إدارة المشتريات والمخازن</td>
-        <td>4</td>
-        <td>1</td>
-        <td>5</td>
-        <td class="grade-good">جيد</td>
-    </tr>
-    <tr>
-        <td>التنمية والتخطيط الاقتصادي</td>
-        <td>4</td>
-        <td>-</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-    <tr>
-        <td>اقتصاديات المالية العامة والنظم الضريبية</td>
-        <td>4</td>
-        <td>-</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-    <tr>
-        <td>التأمين ورياضياته</td>
-        <td>4</td>
-        <td>2</td>
-        <td>6</td>
-        <td class="grade-good">جيد</td>
-    </tr>
-    <tr>
-        <td>الإحصاء التطبيقي وبحوث العمليات</td>
-        <td>4</td>
-        <td>2</td>
-        <td>6</td>
-        <td class="grade-good">جيد</td>
-    </tr>
-    <tr>
-        <td>دراسات تجارية بلغة إنجليزية (3)</td>
-        <td>-</td>
-        <td>4</td>
-        <td>4</td>
-        <td class="grade-pass">مقبول</td>
-    </tr>
-</table>
-
-<h3>الإجمالي: <span class="grade-good">22 مادة، 6 مواد بنظام الساعات المعتمدة</span></h3>
-<h3>التقدير الكلي: <span class="grade-good">جيد</span></h3>
-<h3>GPA: <span class="grade-good">2.5</span></h3>
-
-<div class="footer">
-    جميع الحقوق محفوظة © جامعة المنصورة 2025
-</div>
-<script src="script.js"></script>
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        loginPage.style.display = "none";
+        resultPage.style.display = "block";
+    });
+</script>
 
 </body>
 </html>
