@@ -30,102 +30,115 @@
     </div>
 </div>
 
+<!-- صفحة الأيقونات -->
+<div id="iconsPage" class="icons-container" style="display: none;">
+    <img src="mans5.png" alt="جامعة المنصورة" class="logo">
+    <div class="icon">رغبات التشعيب</div>
+    <div class="icon">مقرراتي</div>
+    <div class="icon">مقررات اختيارية</div>
+    <div class="icon">بريد الجامعة</div>
+    <div class="icon" onclick="showResultPage()">النتائج</div>
+    <div class="icon">الخدمات</div>
+</div>
+
 <!-- صفحة النتائج -->
 <div id="resultPage" class="result-container" style="display: none;">
     <img src="mans5.png" alt="MU" class="logo">
     <h2>كلية التجارة - انتظام</h2>
     <p>العام الدراسي: 2023-2024</p>
-    <h1>نتيجة الطالب</h1>
-    <h3>الاسم: يوسف محمد العوضي متولي السكري</h3>
-
+    <!-- إظهار اسم الطالب -->
+    <h1>الاسم: يوسف محمد العوضي متولي السكري</h1>
+    
     <h3>الترم الأول 2025</h3>
 
-    <table>
-        <tr>
-            <th>المقرر</th>
-            <th>الساعات</th>
-            <th>الدرجات</th>
-            <th>التقدير</th>
-        </tr>
-        <tr>
-            <td>أصول التكاليف (1)</td>
-            <td>3</td>
-            <td>1</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <td>أصول تكاليف (2)</td>
-            <td>3</td>
-            <td>1</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <td>المحاسبة الحكومية والقومية (1)</td>
-            <td>3</td>
-            <td>1</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <td>المحاسبة الحكومية والقومية (2)</td>
-            <td>3</td>
-            <td>1</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <td>أصول المراجعة</td>
-            <td>4</td>
-            <td>1</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <td>إدارة المنشآت المالية</td>
-            <td>4</td>
-            <td>2</td>
-            <td class="grade-excellent">ممتاز</td>
-        </tr>
-        <tr>
-            <td>إدارة المشتريات والمخازن</td>
-            <td>4</td>
-            <td>1</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <td>التنمية والتخطيط الاقتصادي</td>
-            <td>4</td>
-            <td>-</td>
-            <td class="grade-pass">مقبول</td>
-        </tr>
-        <tr>
-            <td>اقتصاديات المالية العامة والنظم الضريبية</td>
-            <td>4</td>
-            <td>-</td>
-            <td class="grade-pass">مقبول</td>
-        </tr>
-        <tr>
-            <td>التأمين ورياضياته</td>
-            <td>4</td>
-            <td>2</td>
-            <td class="grade-excellent">ممتاز</td>
-        </tr>
-        <tr>
-            <td>الإحصاء التطبيقي وبحوث العمليات</td>
-            <td>4</td>
-            <td>2</td>
-            <td class="grade-excellent">ممتاز</td>
-        </tr>
-        <tr>
-            <td>دراسات تجارية بلغة إنجليزية (3)</td>
-            <td>4</td>
-            <td>-</td>
-            <td class="grade-pass">مقبول</td>
-        </tr>
-    </table>
+    <div class="scrollable-content">
+        <table>
+            <tr>
+                <th>المقرر</th>
+                <th>الساعات</th>
+                <th>الدرجات</th>
+                <th>التقدير</th>
+            </tr>
+            <tr>
+                <td>أصول التكاليف (1)</td>
+                <td>3</td>
+                <td>1</td>
+                <td class="grade-good">جيد</td>
+            </tr>
+            <tr>
+                <td>أصول تكاليف (2)</td>
+                <td>3</td>
+                <td>1</td>
+                <td class="grade-good">جيد</td>
+            </tr>
+            <tr>
+                <td>المحاسبة الحكومية والقومية (1)</td>
+                <td>3</td>
+                <td>1</td>
+                <td class="grade-good">جيد</td>
+            </tr>
+            <tr>
+                <td>المحاسبة الحكومية والقومية (2)</td>
+                <td>3</td>
+                <td>1</td>
+                <td class="grade-good">جيد</td>
+            </tr>
+            <tr>
+                <td>أصول المراجعة</td>
+                <td>4</td>
+                <td>1</td>
+                <td class="grade-good">جيد</td>
+            </tr>
+            <tr>
+                <td>إدارة المنشآت المالية</td>
+                <td>4</td>
+                <td>2</td>
+                <td class="grade-excellent">ممتاز</td>
+            </tr>
+            <tr>
+                <td>إدارة المشتريات والمخازن</td>
+                <td>4</td>
+                <td>1</td>
+                <td class="grade-good">جيد</td>
+            </tr>
+            <tr>
+                <td>التنمية والتخطيط الاقتصادي</td>
+                <td>4</td>
+                <td>-</td>
+                <td class="grade-pass">مقبول</td>
+            </tr>
+            <tr>
+                <td>اقتصاديات المالية العامة والنظم الضريبية</td>
+                <td>4</td>
+                <td>-</td>
+                <td class="grade-pass">مقبول</td>
+            </tr>
+            <tr>
+                <td>التأمين ورياضياته</td>
+                <td>4</td>
+                <td>2</td>
+                <td class="grade-excellent">ممتاز</td>
+            </tr>
+            <tr>
+                <td>الإحصاء التطبيقي وبحوث العمليات</td>
+                <td>4</td>
+                <td>2</td>
+                <td class="grade-excellent">ممتاز</td>
+            </tr>
+            <tr>
+                <td>دراسات تجارية بلغة إنجليزية (3)</td>
+                <td>4</td>
+                <td>-</td>
+                <td class="grade-pass">مقبول</td>
+            </tr>
+        </table>
 
-    <h3>الإجمالي: 22</h3>
-    <h3>الإجمالي (الدرجات المكتسبة): 18</h3>
+        <h3>الإجمالي: 22</h3>
+        <h3>الإجمالي (الدرجات المكتسبة): 18</h3>
 
-    <h3>التقدير الكلي: <span class="grade-excellent">جيد جداً</span></h3>
-    <h3>GPA: <span class="grade-excellent">3.5</span></h3>
+        <h3>التقدير الكلي: <span class="grade-excellent">جيد جداً</span></h3>
+        <h3>GPA: <span class="grade-excellent">3.5</span></h3>
+    </div>
 
     <div class="footer">
         جميع الحقوق محفوظة © جامعة المنصورة 2025
