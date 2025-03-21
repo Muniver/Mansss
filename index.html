@@ -3,124 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نتيجة الطالب - كلية التجارة</title>
+    <title>بوابة الخدمات الطلابية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Result Page -->
-<div id="resultPage" class="result-container">
+<!-- صفحة تسجيل الدخول -->
+<div id="loginPage" class="login-container">
+    <img src="mans5.png" alt="جامعة المنصورة" class="logo">
+    <h1>MyU</h1>
+    <p>بوابة الخدمات الطلابية<br>نظام ابن الهيثم - جامعة المنصورة</p>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required>
+        <div class="remember">
+            <label>تذكرني</label>
+            <input type="checkbox">
+        </div>
+        <button type="submit">تسجيل الدخول</button>
+    </form>
+    <a href="#" class="forgot-password" onclick="forgotPassword()">نسيت كلمة المرور</a>
+    <div class="footer-links">
+        <a href="#">سياسة خصوصية وتأمين البيانات</a>
+        <a href="#">مساعدة</a>
+        <a href="#">English</a>
+    </div>
+</div>
+
+<!-- صفحة النتائج -->
+<div id="resultPage" class="result-container" style="display: none;">
     <img src="mans5.png" alt="MU" class="logo">
     <h2>كلية التجارة - انتظام</h2>
     <p>العام الدراسي: 2023-2024</p>
     <h1>نتيجة الطالب</h1>
     <h3>الاسم: يوسف محمد العوضي متولي السكري</h3>
 
-    <div class="result-options">
-        <button onclick="showFirstTermResult()">نتيجة الترم الأول</button>
-    </div>
-</div>
-
-<!-- First Term Result Page -->
-<div id="firstTermResultPage" class="result-container" style="display: none;">
-    <img src="mans5.png" alt="MU" class="logo">
-    <h2>نتيجة الترم الأول</h2>
-    <p>العام الدراسي: 2023-2024 | الترم: أول</p>
-    <h3>الاسم: يوسف محمد العوضي متولي السكري</h3>
+    <h3>الترم الأول 2025</h3>
 
     <table>
         <tr>
             <th>المقرر</th>
             <th>الساعات</th>
-            <th>الدرجة</th>
+            <th>الدرجات</th>
             <th>التقدير</th>
         </tr>
         <tr>
             <td>أصول التكاليف (1)</td>
             <td>3</td>
-            <td>18</td>
+            <td>1</td>
             <td class="grade-good">جيد</td>
         </tr>
         <tr>
             <td>أصول تكاليف (2)</td>
             <td>3</td>
-            <td>18</td>
+            <td>1</td>
             <td class="grade-good">جيد</td>
         </tr>
         <tr>
             <td>المحاسبة الحكومية والقومية (1)</td>
             <td>3</td>
-            <td>18</td>
+            <td>1</td>
             <td class="grade-good">جيد</td>
         </tr>
         <tr>
             <td>المحاسبة الحكومية والقومية (2)</td>
             <td>3</td>
-            <td>18</td>
+            <td>1</td>
             <td class="grade-good">جيد</td>
         </tr>
         <tr>
             <td>أصول المراجعة</td>
             <td>4</td>
-            <td>22</td>
+            <td>1</td>
             <td class="grade-good">جيد</td>
         </tr>
         <tr>
             <td>إدارة المنشآت المالية</td>
             <td>4</td>
-            <td>22</td>
-            <td class="grade-good">جيد</td>
+            <td>2</td>
+            <td class="grade-excellent">ممتاز</td>
         </tr>
         <tr>
             <td>إدارة المشتريات والمخازن</td>
             <td>4</td>
-            <td>22</td>
+            <td>1</td>
             <td class="grade-good">جيد</td>
         </tr>
         <tr>
             <td>التنمية والتخطيط الاقتصادي</td>
             <td>4</td>
-            <td>22</td>
-            <td class="grade-good">جيد</td>
+            <td>-</td>
+            <td class="grade-pass">مقبول</td>
         </tr>
         <tr>
             <td>اقتصاديات المالية العامة والنظم الضريبية</td>
             <td>4</td>
-            <td>22</td>
-            <td class="grade-good">جيد</td>
+            <td>-</td>
+            <td class="grade-pass">مقبول</td>
         </tr>
         <tr>
             <td>التأمين ورياضياته</td>
             <td>4</td>
-            <td>22</td>
-            <td class="grade-good">جيد</td>
+            <td>2</td>
+            <td class="grade-excellent">ممتاز</td>
         </tr>
         <tr>
             <td>الإحصاء التطبيقي وبحوث العمليات</td>
             <td>4</td>
-            <td>22</td>
-            <td class="grade-good">جيد</td>
+            <td>2</td>
+            <td class="grade-excellent">ممتاز</td>
         </tr>
         <tr>
             <td>دراسات تجارية بلغة إنجليزية (3)</td>
             <td>4</td>
-            <td>22</td>
-            <td class="grade-good">جيد</td>
-        </tr>
-        <tr>
-            <th>الإجمالي</th>
-            <td>44</td>
-            <td>132</td>
-            <td class="grade-good">جيد</td>
+            <td>-</td>
+            <td class="grade-pass">مقبول</td>
         </tr>
     </table>
 
-    <h3>التقدير الكلي: <span class="grade-good">جيد</span></h3>
-    <h3>الإجمالي: <span class="grade-good">132</span></h3>
-    <h3>عدد الساعات: <span class="grade-good">44</span></h3>
+    <h3>الإجمالي: 22</h3>
+    <h3>الإجمالي (الدرجات المكتسبة): 18</h3>
+
+    <h3>التقدير الكلي: <span class="grade-excellent">جيد جداً</span></h3>
+    <h3>GPA: <span class="grade-excellent">3.5</span></h3>
 
     <div class="footer">
-        جميع الحقوق محفوظة © جامعة المنصورة 2023
+        جميع الحقوق محفوظة © جامعة المنصورة 2025
     </div>
 </div>
 
